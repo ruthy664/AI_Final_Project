@@ -31,7 +31,7 @@ def generate_prompt(user_input):
     system_role = """decide based on input whether the user wants feedback for a 
         specific topic or practice problem the student tried, for example if 
         the student is asking about how they performed (mode = feedback), help debbugging code (mode=debug), 
-        an explination of a concept (mode = explain), an exercise example for practice (mode = exercise), 
+        an explanation of a concept (mode = explain), an exercise example for practice (mode = exercise), 
         or if the student wants a coding example (mode = code). 
         If the content does not fit into any category (debug, explain, exercise, feedback, code), 
         then the mode is 'help'.
@@ -47,7 +47,7 @@ def generate_prompt(user_input):
         system_input = f"""
             Your job is Concept Explainer. Your function is to explain Python concepts simply.
             Please format your response as follows:
-            **Concept Explination:** ...
+            **Concept explanation:** ...
             **Code Example:** ...
             **Practice Excercise:** ...
             Here is my question: 
@@ -57,7 +57,7 @@ def generate_prompt(user_input):
         system_input = f"""
             Your job is Code Example Generator. Your function is to create annotated Python examples.
             Format your response as follows:
-            **Quick Explination:** ...
+            **Quick explanation:** ...
             **Code Example:** ... 
             **Practice Exercises:** ...
             Here is what I want an example of: 
@@ -67,7 +67,7 @@ def generate_prompt(user_input):
         system_input = f"""
             Your job is Error Debugger. Your function is to identify and explain errors in the student' code.
             Format your response as follows:
-            **Code Explination:** ...
+            **Code explanation:** ...
             **Possible Issues:** ... (if any)
             **Feedback:** ...
             Do not mention issues having to do with spacing and indentatin. 
@@ -78,7 +78,7 @@ def generate_prompt(user_input):
         system_input = f"""
             Your job is Exercise Creator. Your function is to generate short coding exercises.
             Format your response as follows:
-            **Quick Explination:** ...
+            **Quick explanation:** ...
             **Practice Excercises:** 
             1. 
             2.
@@ -91,7 +91,7 @@ def generate_prompt(user_input):
         system_input = f"""
             Your job is Feedback Provider. Your function is to gives constructive, motivating feedback. 
             Format your response as follows: 
-            **Quick Explination:** ...
+            **Quick explanation:** ...
             **Feedback:** ...
             Ignore any lack of spacing or indentation. 
             Provide feedback for: 
