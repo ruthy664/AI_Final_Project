@@ -5,6 +5,6 @@ How to run the AI tutor:
   pip install streamlit
 2. Get a secret key from openai's API website by going to: https://platform.openai.com/settings/organization/api-keys. Create and copy a secret key, then paste it into
 the .env file in this repository where it says [YOUR SECRET KEY]. 
-3. Make sure you have AI_Tutor.py and .env in the same folder. Then go to the terminal and cd to the folder where AI_Tutor.py and .env are located. Type into your terinal:
+3. Make sure you have AI_Tutor.py and .env in the same folder. Then go to the terminal and cd to the folder where AI_Tutor.py and .env are located. Type into your terimal:
   Streamlit run AI_Tutor.py
 4. Your browser will open up a tab where you can use and interact with the AI tutor. 
